@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header class="container-fluid p-3 text-center bg-dark text-light">
+        <h1>Seller Admin Project</h1>
+    </header>
+    <main>
+        <div class="container my-5 p-3 border border-1 border-secondary">
+            <form class="row align-items-end">
+                <div class="col-md-4">
+                    <label for="price" class="form-label">Selling Price</label><br>
+                    <input type="number" class="form-control" name="price" id="price"><br>
+                </div>
+                <div class="col-md-4">
+                    <label for="itemName" class="form-label">Enter Item Name</label><br>
+                    <input type="text" class="form-control" id="itemName" name="itemName"><br>
+                </div>
+                <div class="col-md-2">
+                    <label for="category" class="form-label">Choose Category</label><br>
+                    <select name="category" class="form-select" id="category"><br>
+                        <option>Choose Table</option>
+                        <option value="Watches">Watches</option>
+                        <option value="Children Toys">Children Toys</option>
+                        <option value="Grocery">Grocery</option>
+                    </select>
+                </div>
+                <div class="col-md-2 d-grid">
+                    <input type="hidden" id="product-id" name="product-id">
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                </div>
+            </form>
+        </div>
+        <div class="container-fluid text-center">
+            <h2>Products</h2>
+        </div>
+        <div class="container-fluid mt-3 d-flex justify-content-between" style="width: 100%">
+            <section style="width: 32%;">
+                <div class="card" style="width: 100%">
+                    <div class="card-header text-center bg-dark text-light">
+                        Watches
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group product-list watches">
+
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-light text-center text-dark fw-bolder">
+                        <span class="watches-amount">0.00</span> Rs : Total Amount
+                    </div>
+                </div>
+            </section>
+            <section style="width: 32%;">
+                <div class="card" style="width: 100%">
+                    <div class="card-header text-center bg-dark text-light">
+                        Children Toys
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group product-list children-toys">
+
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-light text-center text-dark fw-bolder">
+                        <span class="children-toys-amount">0.00</span> Rs : Total Amount
+                    </div>
+
+
+                </div>
+            </section>
+            <section style="width: 32%;">
+                <div class="card" style="width: 100%">
+                    <div class="card-header text-center bg-dark text-light">
+                        Grocery
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group product-list grocery">
+
+                        </ul>
+                    </div>
+                    <div class="card-footer bg-light text-center text-dark fw-bolder">
+                        <span class="grocery-amount">0.00</span> Rs : Total Amount
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="scrpt1.js"></script>
+</body>
+
+</html>
